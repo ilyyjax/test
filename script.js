@@ -7,8 +7,10 @@ function generatePowerballNumbers() {
 
   const powerball = Math.floor(Math.random() * 26) + 1;
 
-  document.getElementById('numbers').innerText = 
-    `Main Numbers: ${mainNumbers.join(', ')} | Powerball: ${powerball}`;
+  document.getElementById('numbers').innerHTML = `
+    Main Numbers: <span class="main">${mainNumbers.join(', ')}</span> 
+    | Powerball: <span class="powerball">${powerball}</span>
+  `;
 }
 
 document.getElementById('generateBtn').addEventListener('click', generatePowerballNumbers);
